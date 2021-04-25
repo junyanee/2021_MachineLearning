@@ -1,6 +1,6 @@
 [main]
 completion/size = (300, 180)
-window/position = (0, 0)
+window/position = (1917, 0)
 window/prefs_dialog_size = (1050, 530)
 window/size = (1906, 1017)
 version = 63.0.0
@@ -74,15 +74,15 @@ console/fixed_directory =
 startup/fixed_directory = C:/Users/junyanee/Desktop/인공지능1/aipSources
 
 [outline_explorer]
-expanded_state = {8392043711813114465: True, 1952549749111813063: False, -1237758633310609989: False, 6905409402023509836: False, 6809585299512311135: False}
+expanded_state = {8018353650758191973: True, -6448250053835139716: False, 6528754382934752139: False, -68981877153820006: False, 3682364130122094268: False}
 scrollbar_position = (0, 0)
 
 [editor]
 splitter_state = 000000ff00000001000000010000036101ffffffff010000000100
-recent_files = ['C:\\Users\\junyanee\\anaconda3\\envs\\aip\\lib\\site-packages\\pydotplus\\graphviz.py', 'C:\\Users\\junyanee\\.spyder-py3\\필기인식sample.py', 'C:\\Users\\junyanee\\.spyder-py3\\필기인식예제.py', 'C:\\Users\\junyanee\\.spyder-py3\\얼굴인식예제.py', 'C:\\Users\\junyanee\\.spyder-py3\\필기숫자 인식 예제_모델선택안함.py', 'C:\\Users\\junyanee\\.spyder-py3\\assignment5.py', 'C:\\Users\\junyanee\\anaconda3\\envs\\aip\\lib\\site-packages\\graphviz\\files.py', 'C:\\Users\\junyanee\\AppData\\Local\\Temp\\kite_tutorial.py', 'C:\\Users\\junyanee\\.spyder-py3\\temp.py', 'C:\\Users\\junyanee\\.spyder-py3\\iris_dataset_to3D.py', 'C:\\Users\\junyanee\\.spyder-py3\\assignment4-2.py']
+recent_files = ['C:\\Users\\junyanee\\.spyder-py3\\필기인식sample.py', 'C:\\Users\\junyanee\\.spyder-py3\\필기인식예제.py', 'C:\\Users\\junyanee\\.spyder-py3\\얼굴인식예제.py', 'C:\\Users\\junyanee\\.spyder-py3\\필기숫자 인식 예제_모델선택안함.py', 'C:\\Users\\junyanee\\.spyder-py3\\assignment5.py', 'C:\\Users\\junyanee\\anaconda3\\envs\\aip\\lib\\site-packages\\pydotplus\\graphviz.py', 'C:\\Users\\junyanee\\anaconda3\\envs\\aip\\lib\\site-packages\\graphviz\\files.py', 'C:\\Users\\junyanee\\AppData\\Local\\Temp\\kite_tutorial.py', 'C:\\Users\\junyanee\\.spyder-py3\\temp.py', 'C:\\Users\\junyanee\\.spyder-py3\\iris_dataset_to3D.py', 'C:\\Users\\junyanee\\.spyder-py3\\assignment4-2.py']
 filenames = ['C:\\Users\\junyanee\\.spyder-py3\\필기인식sample.py', 'C:\\Users\\junyanee\\.spyder-py3\\필기인식예제.py', 'C:\\Users\\junyanee\\.spyder-py3\\얼굴인식예제.py', 'C:\\Users\\junyanee\\.spyder-py3\\필기숫자 인식 예제_모델선택안함.py', 'C:\\Users\\junyanee\\.spyder-py3\\assignment5.py']
 bookmarks = {}
-layout_settings = {'hexstate': '000000ff0000000100000001000003b500ffffffff010000000100', 'sizes': [949], 'splitsettings': [(False, 'C:\\Users\\junyanee\\.spyder-py3\\assignment5.py', [8, 27, 16, 30, 49])]}
+layout_settings = {'hexstate': '000000ff0000000100000001000003b500ffffffff010000000100', 'sizes': [949], 'splitsettings': [(False, 'C:\\Users\\junyanee\\.spyder-py3\\assignment5.py', [8, 27, 16, 30, 54])]}
 
 [explorer]
 file_associations = {}

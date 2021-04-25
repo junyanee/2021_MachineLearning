@@ -40,3 +40,6 @@ runfile('C:/Users/junyanee/.spyder-py3/assignment5.py', wdir='C:/Users/junyanee/
 
 ## ---(Mon Apr 12 20:26:44 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/assignment5.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Sun Apr 25 17:21:32 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/untitled0.py', wdir='C:/Users/junyanee/.spyder-py3')

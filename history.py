@@ -49,3 +49,4 @@ runfile('C:/Users/junyanee/.spyder-py3/untitled0.py', wdir='C:/Users/junyanee/.s
 runfile('C:/Users/junyanee/.spyder-py3/untitled2.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/untitled3.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/untitled4.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/untitled5.py', wdir='C:/Users/junyanee/.spyder-py3')

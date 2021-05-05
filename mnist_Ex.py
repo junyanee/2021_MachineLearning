@@ -40,3 +40,25 @@ hist = mlp.fit(x_train, y_train, batch_size = 128, epochs = 30, validation_data 
 # 학습된 신경망으로 예측
 res = mlp.evaluate(x_test, y_test, verbose = 0)
 print("정확률은 ", res[1] * 100)
+
+import matplotlib.pyplot as plt
+
+# 정확률 곡선
+plt. plot(hist.history['accuracy'])
+plt.plot(hist.history['val_accuracy'])
+plt.title('Model accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Validation'], loc = 'upper left')
+plt.grid()
+plt.show()
+
+# 손실함수 곡선
+plt. plot(hist.history['loss'])
+plt.plot(hist.history['val_loss'])
+plt.title('Model loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Validation'], loc = 'upper right')
+plt.grid()
+plt.show()

@@ -53,3 +53,4 @@ runfile('C:/Users/junyanee/.spyder-py3/untitled5.py', wdir='C:/Users/junyanee/.s
 
 ## ---(Wed May  5 23:32:36 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/mnist_Ex.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/untitled1.py', wdir='C:/Users/junyanee/.spyder-py3')

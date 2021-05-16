@@ -62,3 +62,4 @@ runfile('C:/Users/junyanee/.spyder-py3/untitled0.py', wdir='C:/Users/junyanee/.s
 runfile('C:/Users/junyanee/.spyder-py3/assignment9.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/keras_model.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/assignment9.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/assignment9-2.py', wdir='C:/Users/junyanee/.spyder-py3')

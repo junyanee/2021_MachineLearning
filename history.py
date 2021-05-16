@@ -57,3 +57,8 @@ runfile('C:/Users/junyanee/.spyder-py3/untitled1.py', wdir='C:/Users/junyanee/.s
 
 ## ---(Thu May  6 16:29:37 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/untitled0.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Sun May 16 15:41:17 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/assignment9.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/keras_model.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/assignment9.py', wdir='C:/Users/junyanee/.spyder-py3')

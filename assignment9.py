@@ -1,20 +1,21 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed May  5 00:55:38 2021
+Created on Sun May 16 15:43:12 2021
 
 @author: junyanee
 """
-
 from tensorflow.keras.models import Sequential # Sequential은 층을 한 줄로 쌓는데 사용
 from tensorflow.keras.layers import Dense # 완전 연결층
 from tensorflow.keras.optimizers import SGD # SGD 옵티마이저
 
-# OR  데이터 구축
-x = [[0.0, 0.0],[0.0, 1.0],[1.0, 0.0],[1.0, 1.0]]
-y = [[-1], [1], [1], [1]]
-# 신경망 구조 설계
-n_input = 2
+# OR 데이터 구축
+x = [[0.0, 0,0, 0.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0], 
+     [1.0, 1.0, 1.0], [1.0, 1.0, 0.0], [1.0, 0.0, 1.0], [0.0, 1.0, 1.0]]
+y = [[1], [1], [1], [-1], [1], [-1], [1], [1]]
+
+n_input = 3
 n_output = 1
+
 perceptron = Sequential() #Sequential 클래스로 객체를 생성
 perceptron.add(Dense(units = n_output, activation = 'tanh', input_shape = (n_input, ),
                      kernel_initializer = 'random_uniform',

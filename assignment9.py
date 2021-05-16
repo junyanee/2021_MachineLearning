@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Dense # 완전 연결층
 from tensorflow.keras.optimizers import SGD # SGD 옵티마이저
 
 # OR 데이터 구축
-x = [[0.0, 0,0, 0.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0], 
+x = [[0.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0], 
      [1.0, 1.0, 1.0], [1.0, 1.0, 0.0], [1.0, 0.0, 1.0], [0.0, 1.0, 1.0]]
 y = [[1], [1], [1], [-1], [1], [-1], [1], [1]]
 
@@ -17,9 +17,8 @@ n_input = 3
 n_output = 1
 
 perceptron = Sequential() #Sequential 클래스로 객체를 생성
-perceptron.add(Dense(units = n_output, activation = 'tanh', input_shape = (n_input, ),
-                     kernel_initializer = 'random_uniform',
-                     bias_initializer = 'zeros')) # add 함수로 Dense (완전연결) 층을 쌓음
+perceptron.add(Dense(units = n_output, activation = 'tanh', input_shape = (n_input, ), 
+                     kernel_initializer = 'random_uniform', bias_initializer = 'zeros')) # add 함수로 Dense (완전연결) 층을 쌓음
 
 # 신경망 학습
 perceptron.compile(loss = 'mse', optimizer = SGD(learning_rate = 0.1), metrics = ['mse'])

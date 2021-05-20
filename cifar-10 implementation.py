@@ -36,13 +36,13 @@ cnn.add(Dense(10, activation = 'softmax'))
 
 # 신경망 모델 학습
 cnn.compile(loss = 'categorical_crossentropy', optimizer = Adam(), metrics = ['accuracy'])
-hist = cnn.fit(x_train, y_train, batch_size= 128, epochs = 30, validation_data=(x_test, y_test), verbose = 2)
+hist = cnn.fit(x_train, y_train, batch_size= 128, epochs = 60, validation_data=(x_test, y_test), verbose = 2)
 
 # 신경망 모델 정확률 평가
 res = cnn.evaluate(x_test, y_test, verbose = 0)
 print("정확률은", res[1] * 100)
 
-import matpolotlib.pyplt as plt
+import matplotlib.pyplot as plt
 
 # 정확률 그래프
 plt.plot(hist.history['accuracy'])

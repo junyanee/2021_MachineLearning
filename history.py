@@ -77,3 +77,6 @@ runfile('C:/Users/junyanee/.spyder-py3/untitled1.py', wdir='C:/Users/junyanee/.s
 runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-100 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')

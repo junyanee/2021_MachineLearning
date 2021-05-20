@@ -72,3 +72,8 @@ runfile('C:/Users/junyanee/.spyder-py3/assignment9-2.py', wdir='C:/Users/junyane
 
 ## ---(Thu May 20 23:11:46 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/lenet_implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/untitled1.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')

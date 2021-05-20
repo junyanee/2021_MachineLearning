@@ -69,3 +69,6 @@ runfile('C:/Users/junyanee/.spyder-py3/assignment9.py', wdir='C:/Users/junyanee/
 runfile('C:/Users/junyanee/.spyder-py3/assignment9-2.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/assignment9.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/assignment9-2.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Thu May 20 23:11:46 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/lenet_implementation.py', wdir='C:/Users/junyanee/.spyder-py3')

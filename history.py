@@ -80,3 +80,13 @@ runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Use
 runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/cifar-100 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Fri May 21 11:26:12 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/cifar-100 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-100 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Fri May 21 14:29:51 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')

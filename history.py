@@ -90,3 +90,8 @@ runfile('C:/Users/junyanee/.spyder-py3/cifar-100 implementation.py', wdir='C:/Us
 runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Fri May 21 21:24:14 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/load_my_cnn.h5.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/regularization_data_increase.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')

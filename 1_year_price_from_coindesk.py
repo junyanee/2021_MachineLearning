@@ -20,3 +20,19 @@ plt.plot(seq, color = 'red')
 plt.title('Bitcoin Prices (1 year from 2019-02-28)')
 plt.xlabel('Days'); plt.ylabel('Price in USD')
 plt.show()
+
+# 시계열 데이터를 위도우 단위로 자르는 함수
+def seq2dataset(seq, window, horizon):
+    X = []; Y = []
+    for i in range(len(seq) - (window + horizon) + 1):
+        x = seq[i : (i + window)]
+        y = (seq[i + window + horizon - 1])
+        X.append(x); Y.append(y);
+        return np.array(X), np.array(Y)
+        
+w = 7 #윈도우 크기
+h = 1 #수평선 계수
+
+X, Y = seq2dataset(seq, w, h)
+print(X.shape, Y.shape)
+print(X[0], Y[0]); print(X[-1], Y[-1])

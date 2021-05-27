@@ -98,3 +98,4 @@ runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Use
 
 ## ---(Thu May 27 22:39:49 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/untitled0.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/1_year_price_from_coindesk.py', wdir='C:/Users/junyanee/.spyder-py3')

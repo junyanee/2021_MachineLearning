@@ -22,8 +22,19 @@ image_dir = './CNN_kFood/'
 categories = os.listdir(image_dir)
 nb_classes = len(categories)
 
-print(categories)
-print(nb_classes)
+image_width = 32
+image_height = 32
+pixels = image_width * image_height * 3
+
+x = []
+y = []
+
+for i, cat in enumerate(categories):
+    # one-hot coding
+    label = [0 for i in range(nb_classes)]
+    label[i] = 1
+    
+    
 
 x_train, x_test, y_train, y_test = np.load('./kFood_kind_image_data.npy')
 print(x_train.shape)
@@ -33,20 +44,23 @@ print(x_test.shape)
 (x_train, y_train), (x_test, y_test) = np.load(image_dir)
 x_train = x_train.astype(np.float32) / 255.0
 x_test = x_test.astype(np.float32) / 255.0
-y_train = tf.keras.utils.to_categorical(y_train, 15)
-y_test = tf.keras.utils.to_categorical(y_test, 15)
+y_train = tf.keras.utils.to_categorical(y_train, 30)
+y_test = tf.keras.utils.to_categorical(y_test, 30)
 
 # cnn model - C-P-D-C-P-C-C-P-D-FC-D-FC-D-FC-D-FC
 cnn = Sequential()
-cnn.add(Conv2D(32(8,8), activation = 'relu', input_shape = 'dfdfdfdffd')) #커널 개수, 사이즈 미입력
+cnn.add(Conv2D(32(8,8), padding = 'same', activation = 'relu', input_shape = x_train.shape[1:])) #커널 개수, 사이즈 미입력
 cnn.add(MaxPooling2D(pool_size = (2, 2)))
 cnn.add(Dropout(0.25))
-cnn.add(Conv2D(64,(5,5)), activation = 'relu')
+
+cnn.add(Conv2D(64,(5,5)), padding = 'same', activation = 'relu')
 cnn.add(MaxPooling2D(pool_size = (2, 2)))
-cnn.add(Conv2D(128,(3,3)), activation = 'relu')
-cnn.add(Conv2D(128,(3,3)), activation = 'relu')
+
+cnn.add(Conv2D(128,(3,3)), padding = 'same', activation = 'relu')
+cnn.add(Conv2D(128,(3,3)), padding = 'same', activation = 'relu')
 cnn.add(MaxPooling2D(pool_size = (2, 2)))
 cnn.add(Dropout(0.25))
+
 cnn.add(Flatten())
 cnn.add(Dense(512), activation = 'relu')
 cnn.add(Dropout(0.25))
@@ -54,7 +68,7 @@ cnn.add(Dense(128), activation = 'relu')
 cnn.add(Dropout(0.25))
 cnn.add(Dense(64), activation = 'relu')
 cnn.add(Dropout(0.5))
-cnn.add(Dense(15), activation = 'softmax')
+cnn.add(Dense(30), activation = 'softmax')
 
 # tlsrudakd ahepf gkrtmq
 cnn.compile(loss = 'categorical_crossentropy', optimizer = Adam(), metrics = ['accuracy'])

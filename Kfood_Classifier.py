@@ -8,17 +8,11 @@ kFood class : 15
 images per class : 300
 
 """
-
 import os, glob
 from PIL import Image
-import tensorflow as tf
-from sklearn.model_selection import train_test_split
 import numpy as np
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
-from tensorflow.keras.optimizers import Adam
-import matplotlib.pyplot as plt
-import keras.backend.tensorflow_backend as K
+from sklearn.model_selection import train_test_split
+
 
 image_dir = './CNN_kFood/'
 categories = os.listdir(image_dir)
@@ -56,16 +50,21 @@ y = np.array(y)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y)
 xy = (x_train, x_test, y_train, y_test)
-np.save("multi_image_data.npy", xy)
+np.save("kFood_kind_image_data.npy", xy)
 
-print("ok", len(y))
+print("ok", len(y)) #여기까지 문제없음
+
+import os, glob, numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+from tensorflow.keras.optimizers import Adam
+import matplotlib.pyplot as plt
 
 x_train, x_test, y_train, y_test = np.load('./kFood_kind_image_data.npy')
 print(x_train.shape)
-print(y_train[:10])
-print(x_test.shape)
+print(x_train.shape[0])
 
-(x_train, y_train), (x_test, y_test) = np.load(image_dir)
 x_train = x_train.astype(np.float32) / 255.0
 x_test = x_test.astype(np.float32) / 255.0
 y_train = tf.keras.utils.to_categorical(y_train, 30)

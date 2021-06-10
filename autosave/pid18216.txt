@@ -1,0 +1,1 @@
+{'C:\\Users\\junyanee\\.spyder-py3\\Kfood_Classifier.py': 'C:\\Users\\junyanee\\.spyder-py3\\autosave\\Kfood_Classifier.py'}

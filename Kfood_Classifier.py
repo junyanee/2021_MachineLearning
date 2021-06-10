@@ -9,42 +9,32 @@ images per class : 300
 
 """
 
-import numpy as np
-from PIL import Image
 import os
-
-def one_hot(i):
-    a = np.zeros(15, 'uint8')
-    a[i] = 1
-    return a
-
-data_dir = './Images/'
-nb_classes = 15
-
-result_arr = np.empty(12198, 12303)
-
-idx_start = 0
-
-for cls, food_name in enumerate(os.listdir(data_dir)):
-    image_dir = data_dir + food_name + '/'
-    file_list = os.listdir(image_dir)
-    
-    for idx, f in enumerate(file_list):
-        im = Image.open(image_dir + f)
-        pix = np.array(im)
-        arr = pix.reshape(1, 12288)
-        result_arr[idx_start + idx] = np.append(arr, one_hot(cls))
-    idx_start += len(file_list)
-
-np.save('result.npy', result_arr)
-
+from PIL import Image
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 
-(x_train, y_train), (x_test, y_test) = np.load(data_dir)
+
+image_dir = './CNN_kFood/'
+categories = os.listdir(image_dir)
+nb_classes = len(categories)
+
+print(categories)
+print(nb_classes)
+
+x_train, x_test, y_train, y_test = np.load('./kFood_kind_image_data.npy')
+print(x_train.shape)
+print(y_train[:10])
+print(x_test.shape)
+
+(x_train, y_train), (x_test, y_test) = np.load(image_dir)
+x_train = x_train.astype(np.float32) / 255.0
+x_test = x_test.astype(np.float32) / 255.0
+y_train = tf.keras.utils.to_categorical(y_train, 15)
+y_test = tf.keras.utils.to_categorical(y_test, 15)
 
 # cnn model - C-P-D-C-P-C-C-P-D-FC-D-FC-D-FC-D-FC
 cnn = Sequential()
@@ -69,9 +59,29 @@ cnn.add(Dense(15), activation = 'softmax')
 # tlsrudakd ahepf gkrtmq
 cnn.compile(loss = 'categorical_crossentropy', optimizer = Adam(), metrics = ['accuracy'])
 hist = cnn.fit(x_train, y_train, batch_size = 64, epochs = 30, validation_data = (x_test, y_test), verbose = 2)
+cnn.save("kFood_cnn.h5")
+cnn.summary()
 
 # tlsrudakd ahepf wjdghkrfbf vudrk
 res = cnn.evaluate(x_test, y_test, verbose = 0)
 print("accuracy is", res[1] * 100)
 
 import matplotlib.pyplot as plt
+
+plt.plot(hist.history['accuracy'])
+plt.plot(hist.history['val_accuracy'])
+plt.title('Model Accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Validation'], loc = 'best')
+plt.grid()
+plt.show()
+
+plt.plot(hist.history['loss'])
+plt.plot(hist.history['val_loss'])
+plt.title('Model Loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Validation'], loc = 'best')
+plt.grid()
+plt.show()

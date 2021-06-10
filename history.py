@@ -115,3 +115,8 @@ runfile('C:/Users/junyanee/.spyder-py3/untitled0.py', wdir='C:/Users/junyanee/.s
 
 ## ---(Fri Jun 11 01:29:38 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Fri Jun 11 02:01:16 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')

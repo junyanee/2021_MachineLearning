@@ -103,3 +103,9 @@ runfile('C:/Users/junyanee/.spyder-py3/7일차 가격을 통해 다음날 가격
 
 ## ---(Thu Jun 10 10:41:27 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Thu Jun 10 21:02:56 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Thu Jun 10 23:47:12 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/untitled0.py', wdir='C:/Users/junyanee/.spyder-py3')

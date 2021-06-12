@@ -60,7 +60,7 @@ np.save("kFood_kind_image_data_vgg16.npy", xy)
 
 import os, glob, numpy as np
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPool2D, Flatten, Dense
+from tensorflow.keras.layers import Conv2D, MaxPool2D, Flatten, Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 import matplotlib.pyplot as plt
 
@@ -87,21 +87,26 @@ cnn = Sequential()
 cnn.add(Conv2D(input_shape=(32,32,3),filters=64,kernel_size=(3,3),padding="same", activation="relu"))
 cnn.add(Conv2D(filters=64,kernel_size=(3,3),padding="same", activation="relu"))
 cnn.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
+cnn.add(Dropout(0.25))
 cnn.add(Conv2D(filters=128, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(Conv2D(filters=128, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
+cnn.add(Dropout(0.25))
 cnn.add(Conv2D(filters=256, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(Conv2D(filters=256, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(Conv2D(filters=256, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
+cnn.add(Dropout(0.25))
 cnn.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
+cnn.add(Dropout(0.25))
 cnn.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
 cnn.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
+cnn.add(Dropout(0.25))
 cnn.add(Flatten())
 cnn.add(Dense(units=4096,activation="relu"))
 cnn.add(Dense(units=4096,activation="relu"))

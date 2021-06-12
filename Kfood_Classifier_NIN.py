@@ -30,8 +30,8 @@ print("CNN_kFood에는 ", nb_classes, "개의 클래스가 있습니다.")
 print(categories)
 
 # 이미지 사이즈 값 설정
-image_width = 100
-image_height = 100
+image_width = 32
+image_height = 32
 
 # 어레이 생성
 x = []
@@ -67,7 +67,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y)
 xy = (x_train, x_test, y_train, y_test)
 
 # npy 파일로 저장
-np.save("kFood_kind_image_data.npy", xy)
+np.save("kFood_kind_image_data_NIN.npy", xy)
 print("npy 파일 저장 완료")
 
 
@@ -78,7 +78,7 @@ from tensorflow.keras.optimizers import Adam
 import matplotlib.pyplot as plt
 
 # 전처리한 데이터 로드
-x_train, x_test, y_train, y_test = np.load('./kFood_kind_image_data.npy', allow_pickle = True)
+x_train, x_test, y_train, y_test = np.load('./kFood_kind_image_data_NIN.npy', allow_pickle = True)
 print(x_train.shape)
 print(x_train.shape[0])
 
@@ -93,18 +93,18 @@ print(y_train.shape[0])
 
 # 신경망 모델 #
 cnn = Sequential()
-cnn.add(Conv2D(32,(3,3), padding = 'same', activation = 'relu', input_shape = (image_width, image_height, 3)))
-cnn.add(Conv2D(32,(3,3), padding = 'same', activation = 'relu'))
+cnn.add(Conv2D(64,(3,3), padding = 'same', activation = 'relu', input_shape = (image_width, image_height, 3)))
+cnn.add(Conv2D(32,(1,1), padding = 'valid', activation = 'relu'))
 cnn.add(MaxPooling2D(pool_size = (2, 2)))
 cnn.add(Dropout(0.25))
 
 cnn.add(Conv2D(64,(3,3), padding = 'same', activation = 'relu'))
-cnn.add(Conv2D(64,(3,3), padding = 'same', activation = 'relu'))
+cnn.add(Conv2D(32,(1,1), padding = 'valid', activation = 'relu'))
 cnn.add(MaxPooling2D(pool_size = (2, 2)))
 cnn.add(Dropout(0.25))
 
 cnn.add(Conv2D(128,(3,3), padding = 'same', activation = 'relu'))
-cnn.add(Conv2D(128,(3,3), padding = 'same', activation = 'relu'))
+cnn.add(Conv2D(64,(1,1), padding = 'valid', activation = 'relu'))
 cnn.add(MaxPooling2D(pool_size = (2, 2)))
 cnn.add(Dropout(0.25))
 
@@ -123,7 +123,7 @@ cnn.compile(loss = 'categorical_crossentropy', optimizer = Adam(), metrics = ['a
 hist = cnn.fit(x_train, y_train, batch_size = 64, epochs = 50, validation_split = 0.2, verbose = 1)
 
 # 신경망 구조, 가중치 저장
-cnn.save("kFood_cnn.h5")
+cnn.save("kFood_cnn_nin.h5")
 
 
 # 신경망 모델 정확률 평가

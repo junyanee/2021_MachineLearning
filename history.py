@@ -122,3 +122,4 @@ runfile('C:/Users/junyanee/.spyder-py3/cifar-10 implementation.py', wdir='C:/Use
 runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier_NIN.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/kFood_Classifier_VGG16.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier_NIN.py', wdir='C:/Users/junyanee/.spyder-py3')

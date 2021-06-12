@@ -19,8 +19,8 @@ print("CNN_kFood에는 ", nb_classes, "개의 클래스가 있습니다.")
 print(categories)
 
 # 이미지 사이즈 값 설정
-image_width = 224
-image_height = 224
+image_width = 32
+image_height = 32
 
 # 어레이 생성
 x = []

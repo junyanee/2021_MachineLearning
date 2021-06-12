@@ -52,7 +52,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y)
 xy = (x_train, x_test, y_train, y_test)
 np.save("kFood_kind_image_data.npy", xy)
 
-print("ok", len(y)) #여기까지 문제없음
+print("ok", len(y))
 
 import os, glob, numpy as np
 # import tensorflow as tf

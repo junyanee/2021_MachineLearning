@@ -128,3 +128,10 @@ runfile('C:/Users/junyanee/.spyder-py3/kFood_Classifier_VGG16.py', wdir='C:/User
 runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/kFood_Classifier_VGG16.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/kFood_Classifier_KerasCNN.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/kFood_Classifier_KerasCNN.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Sun Jun 13 17:10:18 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.spyder-py3')

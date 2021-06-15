@@ -42,7 +42,7 @@ for file in os.listdir(image_dir):
 
 
 test = np.array(test)
-model = load_model('kFood_cnn_VGG16.h5')
+model = load_model('kFood_cnn_KerasCNN_2.h5')
 predict = model.predict_classes(test)
 
 for i in range(len(test)):

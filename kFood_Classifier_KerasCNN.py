@@ -75,7 +75,7 @@ x_test = x_test.astype(np.float32) / 255.0
 print(y_train.shape)
 print(y_train.shape[0])
 
-# cnn model : C-C-P-D - C-P-D - C-P-D - FC-D-FC
+# 제작한 cnn model : C-C-P-D - C-P-D - C-P-D - FC-D-FC-FC-FC
 
 # 신경망 모델 #
 cnn=Sequential()
@@ -95,6 +95,8 @@ cnn.add(Dropout(0.25))
 cnn.add(Flatten())
 cnn.add(Dense(256, activation='relu'))
 cnn.add(Dropout(0.5))
+cnn.add(Dense(32, activation='relu'))
+cnn.add(Dense(16, activation='relu'))
 cnn.add(Dense(nb_classes, activation='softmax'))
 
 
@@ -106,7 +108,7 @@ cnn.compile(loss = 'categorical_crossentropy', optimizer = Adam(), metrics = ['a
 hist = cnn.fit(x_train, y_train, batch_size = 32, epochs = 100, validation_data = (x_test, y_test), verbose = 1)
 
 # 신경망 구조, 가중치 저장
-cnn.save("kFood_cnn_KerasCNN.h5")
+cnn.save("kFood_cnn_KerasCNN_2.h5")
 
 # 신경망 모델 정확률 평가
 res = cnn.evaluate(x_test, y_test, verbose = 0)

@@ -139,3 +139,6 @@ runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.
 ## ---(Tue Jun 15 20:36:07 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/kFood_Classifier_KerasCNN.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Wed Jun 16 18:44:03 2021)---
+runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')

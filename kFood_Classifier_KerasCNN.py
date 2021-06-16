@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jun 13 02:19:15 2021
-
 @author: junyanee
+
+직접 제작한 모델 구현
 """
 
 import os, glob
@@ -19,9 +19,8 @@ image_dir = 'D:\project_dataset/CNN_kFood/'
 
 # 클래스 개수 (아웃풋 개수)
 categories = os.listdir(image_dir)
-nb_classes = len(categories)
-print("CNN_kFood에는 ", nb_classes, "개의 클래스가 있습니다.")
-print(categories)
+classes = len(categories)
+print("CNN_kFood에는 ", classes, "개의 클래스가 있습니다.")
 
 # 이미지 사이즈 값 설정
 image_width = 32
@@ -34,7 +33,7 @@ y = []
 # 데이터셋 전처리 #
 for idx, cat in enumerate(categories):
     # 원 핫 코드로 변경
-    label = [0 for i in range(nb_classes)]
+    label = [0 for i in range(classes)]
     label[idx] = 1
     
     # 이미지 불러오기
@@ -47,9 +46,9 @@ for idx, cat in enumerate(categories):
         img = Image.open(f)
         img = img.convert("RGB")
         img = img.resize((image_width, image_height))
-        data = np.asarray(img)
+        pixel = np.asarray(img)
 
-        x.append(data)
+        x.append(pixel)
         y.append(label)
 
 # 전처리한 값 어레이에 넣기
@@ -65,39 +64,37 @@ np.save("kFood_kind_image_data_KerasCNN.npy", xy)
 
 # 전처리한 데이터 로드
 x_train, x_test, y_train, y_test = np.load('./kFood_kind_image_data_KerasCNN.npy', allow_pickle = True)
-print(x_train.shape)
-print(x_train.shape[0])
+
+# 텐서구조 출력
+print(x_train.shape, y_train.shape)
 
 # 0~1 사이의 값으로 정규화
 x_train = x_train.astype(np.float32) / 255.0
 x_test = x_test.astype(np.float32) / 255.0
 
-print(y_train.shape)
-print(y_train.shape[0])
-
 # 제작한 cnn model : C-C-P-D - C-P-D - C-P-D - FC-D-FC-FC-FC
 
 # 신경망 모델 #
 cnn=Sequential()
-cnn.add(Conv2D(32,(3,3),activation='relu',input_shape=(image_width,image_height,3)))
-cnn.add(Conv2D(32,(3,3),activation='relu'))
-cnn.add(MaxPooling2D(pool_size=(2,2)))
+cnn.add(Conv2D(32, (3, 3), activation = 'relu', input_shape = (image_width, image_height, 3)))
+cnn.add(Conv2D(32, (3, 3), activation = 'relu'))
+cnn.add(MaxPooling2D(pool_size = (2, 2)))
 cnn.add(Dropout(0.25))
 
-cnn.add(Conv2D(64,(3,3),activation='relu'))
-cnn.add(MaxPooling2D(pool_size=(2,2)))
+cnn.add(Conv2D(64, (3, 3), activation = 'relu'))
+cnn.add(MaxPooling2D(pool_size = (2, 2)))
 cnn.add(Dropout(0.25))
 
-cnn.add(Conv2D(64,(3,3),activation='relu'))
+cnn.add(Conv2D(64, (3, 3), activation = 'relu'))
 cnn.add(MaxPooling2D(pool_size = (2, 2)))
 cnn.add(Dropout(0.25))
 
 cnn.add(Flatten())
-cnn.add(Dense(256, activation='relu'))
+cnn.add(Dense(256, activation = 'relu'))
 cnn.add(Dropout(0.5))
-cnn.add(Dense(32, activation='relu'))
-cnn.add(Dense(16, activation='relu'))
-cnn.add(Dense(nb_classes, activation='softmax'))
+cnn.add(Dense(32, activation = 'relu'))
+cnn.add(Dense(16, activation = 'relu'))
+cnn.add(Dense(classes, activation = 'softmax'))
 
 
 # 모델 구조 확인

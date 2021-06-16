@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jun 13 05:48:14 2021
-
 @author: junyanee
+
+새로운 영상 예측
 """
+
+# https://twinw.tistory.com/252 "4. 학습한 모듈 사용하기" 에서 참고함
 
 import os
 import cv2
@@ -12,6 +14,7 @@ from tensorflow.keras.models import load_model
 import matplotlib.image as img
 import matplotlib.pyplot as plt
 
+# 이미지 전처리하는 함수
 def Dataization(img_path):
     image_w = 32
     image_h = 32
@@ -21,18 +24,21 @@ def Dataization(img_path):
 
 image_dir= './test_kFood'
 
+# 출력층 클래스
 categories = ['간장게장', '갈비구이', '갈비찜', '갈비탕', '갈치구이', '감자채볶음', '감자탕', '계란말이', '계란찜', '고등어구이']
 
 src = []
 name = []
 test = []
 
+# 경로 돌면서 이미지 전처리
 for file in os.listdir(image_dir):
     if (file.find('.jpg') is not -1):
         src.append(image_dir +"/"+ file)
         name.append(file)
         test.append(Dataization(image_dir +"/"+ file))
         
+        # 이미지 보여주기
         ndarray = img.imread(image_dir +"/"+ file)
         plt.title(file)
         plt.imshow(ndarray)
@@ -40,12 +46,11 @@ for file in os.listdir(image_dir):
         
     
 
-
+# 저장된 모델 가져와서 예측
 test = np.array(test)
 model = load_model('kFood_cnn_KerasCNN_2.h5')
 predict = model.predict_classes(test)
 
 for i in range(len(test)):
-
     print(name[i], "사진은", (categories[predict[i]]), "(으)로 판별됩니다.")
 

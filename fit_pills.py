@@ -60,10 +60,10 @@ x_train, x_test, y_train, y_test = train_test_split(x, y)
 xy = (x_train, x_test, y_train, y_test)
 
 # npy 파일로 저장
-np.save("kFood_kind_image_data_KerasCNN.npy", xy)
+np.save("pills_image_data.npy", xy)
 
 # 전처리한 데이터 로드
-x_train, x_test, y_train, y_test = np.load('./kFood_kind_image_data_KerasCNN.npy', allow_pickle = True)
+x_train, x_test, y_train, y_test = np.load('./pills_image_data.npy', allow_pickle = True)
 
 # 텐서구조 출력
 print(x_train.shape, y_train.shape)
@@ -105,7 +105,7 @@ cnn.compile(loss = 'categorical_crossentropy', optimizer = Adam(), metrics = ['a
 hist = cnn.fit(x_train, y_train, batch_size = 32, epochs = 100, validation_data = (x_test, y_test), verbose = 1)
 
 # 신경망 구조, 가중치 저장
-cnn.save("kFood_cnn_KerasCNN_2.h5")
+cnn.save("pills_params.h5")
 
 # 신경망 모델 정확률 평가
 res = cnn.evaluate(x_test, y_test, verbose = 0)

@@ -46,7 +46,7 @@ for file in os.listdir(image_dir):
 
 # 저장된 모델 가져와서 예측
 test = np.array(test)
-model = load_model('kFood_cnn_KerasCNN_2.h5')
+model = load_model('pills_params.h5')
 predict = model.predict_classes(test)
 
 for i in range(len(test)):

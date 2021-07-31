@@ -142,3 +142,9 @@ runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.
 
 ## ---(Wed Jun 16 18:44:03 2021)---
 runfile('C:/Users/junyanee/.spyder-py3/Kfood_Classifier.py', wdir='C:/Users/junyanee/.spyder-py3')
+
+## ---(Sun Aug  1 05:08:07 2021)---
+runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/fit_pills.py', wdir='C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot')
+runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/predict_pills.py', wdir='C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot')
+runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.spyder-py3')
+runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/predict_pills.py', wdir='C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot')

@@ -148,3 +148,6 @@ runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/fit_
 runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/predict_pills.py', wdir='C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot')
 runfile('C:/Users/junyanee/.spyder-py3/kFood_test.py', wdir='C:/Users/junyanee/.spyder-py3')
 runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/predict_pills.py', wdir='C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot')
+
+## ---(Tue Aug  3 19:39:44 2021)---
+runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/fit_pills.py', wdir='C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot')

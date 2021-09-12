@@ -167,3 +167,6 @@ runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/pred
 
 ## ---(Wed Aug 18 21:25:16 2021)---
 runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/predict_pills.py', wdir='C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot')
+
+## ---(Sun Aug 29 22:58:19 2021)---
+runfile('C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot/predict_pills.py', wdir='C:/Users/junyanee/git-workspace/Self-driving-Nurse-Assistant-Robot')
